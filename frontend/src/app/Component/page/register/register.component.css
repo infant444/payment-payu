@@ -1,0 +1,145 @@
+.cont{
+
+  background: url(../../../../assets/image/backgroundlogin1.jpg) fixed center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  width: 380px;
+  height: 680px;
+  background-color: rgb(16, 15, 19);
+  position: relative;
+  border-end-end-radius: 3rem;
+  border-top-left-radius: 3rem;
+  overflow: hidden;
+
+}
+.content::before{
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 300px;
+  height: 500px;
+  background: linear-gradient(0deg,transparent,transparent,rgb(6, 234, 32),rgb(255, 0, 0),rgb(8, 135, 208));
+  z-index: 0;
+  transform-origin: bottom right ;
+  animation: loginborder 6s linear infinite;
+}
+@keyframes loginborder {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(380deg);
+  }
+}
+.content form{
+  position: absolute;
+  inset: 4px;
+  background-color: rgb(43, 17, 105);
+  padding: 40px 50px;
+  border-end-end-radius: 3rem;
+  border-top-left-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.inputbox{
+  position: relative;
+  width: 300px;
+  margin-top: 3rem;
+}
+.inputbox input{
+  position: relative;
+  width: 100%;
+  padding: 1.6rem .6rem .6rem ;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 20px;
+  border: none;
+  color:rgb(43, 17, 105) ;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  transition: .5s;
+  z-index: 10;
+}
+
+.inputbox span{
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  padding: 1.6rem .6rem .6rem ;
+  /* top: 0; */
+  color: #8f8f9f;
+  letter-spacing: 2px;
+  transition: .5s;
+  font-size: 1.2rem;
+  z-index: 2;
+  bottom: 20px;
+}
+.inputbox span mat-icon{
+  width: 1.2rem;
+  height: 1.4rem;
+  font-size: 1.2rem;
+  padding-top: .3rem;
+}
+.content form .inputbox input:valid ~span,
+.content form .inputbox input:focus ~span{
+  color: #14093f;
+  font-size: .75rem;
+  transform: translateY(-34px);
+}
+
+.content form .inputbox input:focus ~span mat-icon
+.content form .inputbox input:valid ~span mat-icon{
+  width: .75rem;
+  height: 1.05rem;
+  font-size: .75rem;
+  padding-top: .3rem;
+}
+i{
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  width: 100%;
+  height: 2px;
+  border-radius: .5rem;
+}
+.content form .inputbox input:valid ~i,
+.content form .inputbox input:focus ~i{
+height: 60px;
+}
+button{
+  width: 50%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.7rem;
+  padding: 1rem;
+  border-top-right-radius: 2rem;
+  border-end-start-radius: 2rem;
+  border: 2px solid white;
+  background-color: #41415c;
+  color: white;
+  position: absolute;
+}
+button:hover{
+  background-color: #fff;
+  color: #14093f;
+  border-color: #41415c;
+}
+p{
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+.link{
+  text-decoration: none;
+  color: lightcoral;
+}

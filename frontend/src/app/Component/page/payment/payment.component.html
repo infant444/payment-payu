@@ -1,0 +1,57 @@
+<div class="con">
+
+  <app-title title="Payment" Color="black"></app-title>
+
+  <app-notfound *ngIf="user1.paymenttype!='NONE'"></app-notfound>
+  <div class="content" *ngIf="user1.paymenttype ==='NONE'">
+    <div class="base" >
+      <h3>Basic plan</h3>
+
+      <ul>
+        <li>Global Reach</li>
+        <li>Cost-Effectiveness</li>
+        <li>Accessibility</li>
+        <li>Personalization</li>
+      </ul>
+      <p><s class="s">{{3500|currency:'INR'}}</s></p>
+      <span>50%</span>
+      <p class="am">{{1700|currency:'INR'}}</p>
+      <button (click)="base()">pay now</button>
+    </div>
+    <div class="standed" >
+      <h3>Standed plan</h3>
+      <ul>
+        <li>Global Reach</li>
+        <li>Cost-Effectiveness</li>
+        <li>Accessibility</li>
+        <li>Personalization</li>
+        <li>Increased Sales</li>
+        <li>Analysis</li>
+      </ul>
+      <p><s class="s">{{4500|currency:'INR'}}</s></p>
+      <span>50%</span>
+      <p class="am">{{2250|currency:'INR'}}</p>
+      <button (click)="standed()">pay now</button>
+    </div>
+    <div class="primum">
+      <h3>Premium plan</h3>
+
+      <ul>
+        <li>Global Reach</li>
+        <li>Cost-Effectiveness</li>
+        <li>Accessibility </li>
+        <li>Personalization</li>
+        <li>Increased Sales </li>
+        <li>Data Collection</li>
+        <li>Brand Building</li>
+        <li>Automation </li>
+        <li>Real-Time Updates</li>
+      </ul>
+      <p><s class="s">{{5500|currency:'INR'}}</s></p>
+      <span>50%</span>
+      <p class="am">{{2750|currency:'INR'}}</p>
+      <button (click)="primum()">pay now</button>
+<!-- https://pmny.in/qrO56Fj1Jl29 -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="cont">
+  <div class="content">
+    <app-title title="Sign up" Color="#f8f9f9"></app-title>
+    <form [formGroup]="RegisterForm" (ngSubmit)="submit()">
+      <div class="inputbox">
+        <input type="text" formControlName="username" required="true">
+        <span>Username</span>
+        <i></i>
+        <app-inputvalidate [control]="Fc.username" [showErrorsWhen]="isSubmit"></app-inputvalidate>
+      </div>
+      <div class="inputbox">
+        <input type="text" formControlName="email"  required="true">
+        <span>Email</span>
+        <i></i>
+        <app-inputvalidate [control]="Fc.email" [showErrorsWhen]="isSubmit"></app-inputvalidate>
+      </div>
+      <div class="inputbox">
+        <input type="password" formControlName="password"  required="true">
+        <span>Password</span>
+        <i></i>
+        <app-inputvalidate [control]="Fc.password" [showErrorsWhen]="isSubmit"></app-inputvalidate>      </div>
+      <div class="inputbox">
+        <input type="password" formControlName="conformpassword"  required="true">
+        <span>Conform Password</span>
+        <app-inputvalidate [control]="Fc.conformpassword" [showErrorsWhen]="isSubmit"></app-inputvalidate>
+        <i></i>
+      </div>
+      <div class="inputbox">
+        <button type="submit">Register</button>
+      </div>
+      <div class="inputbox">
+        <p>New User <a routerLink="/login" class="link">Sign in</a></p>
+      </div>
+    </form>
+  </div>
+</div>

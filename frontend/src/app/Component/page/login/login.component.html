@@ -1,0 +1,25 @@
+<div class="cont">
+  <div class="content">
+    <app-title title="login" Color="#f8f9f9"></app-title>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div class="inputbox">
+        <input type="text" formControlName="username" required="true">
+        <span><mat-icon>perm_identity</mat-icon>Username</span>
+        <i></i>
+        <app-inputvalidate [control]="Fc.username" [showErrorsWhen]="isSubmit"></app-inputvalidate>
+      </div>
+      <div class="inputbox">
+        <input type="password" formControlName="password"  required="true">
+        <span><mat-icon>lock</mat-icon>Password</span>
+        <i></i>
+        <app-inputvalidate [control]="Fc.password" [showErrorsWhen]="isSubmit"></app-inputvalidate>
+      </div>
+      <div class="inputbox">
+        <button type="submit">Login</button>
+      </div>
+      <div class="inputbox">
+        <p>New User <a routerLink="/register" class="link">Sign up</a></p>
+      </div>
+    </form>
+  </div>
+</div>

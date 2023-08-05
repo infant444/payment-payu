@@ -1,0 +1,9 @@
+.error{
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  height: 20px;
+  bottom: 0;
+  text-align: right;
+  color: rgb(246, 126, 144);
+}

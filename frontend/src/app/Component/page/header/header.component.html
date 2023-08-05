@@ -1,0 +1,15 @@
+
+  <div class="con">
+    <div class="title">
+     <a routerLink="/"> Welcome</a>
+    </div>
+    <div>
+      <ul>
+        <li *ngIf="user.id">{{user.username}}</li>
+        <li (click)="login()" *ngIf="!user.id">Login</li>
+        <li (click)="payment()">Payment</li>
+        <li (click)="logout()"*ngIf="user.id">Logout</li>
+      </ul>
+    </div>
+  </div>
+
