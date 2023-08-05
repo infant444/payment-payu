@@ -1,5 +1,6 @@
-const BASE_URL='http://localhost:5000';
+import { environment } from "src/environment/environment.pord";
 
+const BASE_URL=environment.production?'':'http://localhost:5000';
 
 export const REGISTER=BASE_URL+"/api/user/register";
 export const LOGIN=BASE_URL+"/api/user/login";

@@ -7,6 +7,7 @@ import express from 'express';
 import cors from 'cors';
 import { dbconnect } from './config/database.config';
 import UserRouter from './routers/user.router';
+import path from 'path';
 
 
 dbconnect();
@@ -20,7 +21,10 @@ app.use(cors({
 
 
  app.use('/api/user',UserRouter);
-
+ app.use(express.static('public'))
+ app.get("*",(req,res)=>{
+     res.sendFile(path.join(__dirname,'public','index.html'))
+ })
 
 const Port=process.env.PORT||5000;
 app.listen(Port,()=>{
