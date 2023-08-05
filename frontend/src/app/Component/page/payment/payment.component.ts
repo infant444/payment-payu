@@ -31,7 +31,7 @@ export class PaymentComponent {
     }
     this.userservice.payment(this.user.id, paydet).subscribe(
       (user) => {
-        window.location.href = 'https://pmny.in/qrO56Fj1Jl29';
+        window.location.href = 'https://pmny.in/iJN3eaHb4EGH';
       }
     )
 
@@ -43,7 +43,7 @@ export class PaymentComponent {
     }
     this.userservice.payment(this.user.id, paydet).subscribe(
       (user) => {
-        window.location.href = 'https://pmny.in/LrT05PMPolHF';
+        window.location.href = 'https://pmny.in/Irl0FPYQ26JT';
 
       }
     )
@@ -54,7 +54,7 @@ export class PaymentComponent {
     }
     this.userservice.payment(this.user.id, paydet).subscribe(
       (user) => {
-        window.location.href = 'https://pmny.in/FIwcOamwZrW5';
+        window.location.href = 'https://pmny.in/Irl0FPYQ26JT';
       }
     )
   }
